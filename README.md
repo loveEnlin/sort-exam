@@ -1,2 +1,1 @@
-# sort-exam
-Comparison of different comparison sort methods.
+# Comparison of Different Comparison Sorting Methods
