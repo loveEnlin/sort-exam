@@ -1,1 +1,2 @@
-# Comparison of Different Comparison Sorting Methods
+Comparison of [Comparison sorts](https://en.wikipedia.org/wiki/Comparison_sort "Comparison sort -Wikipedia").
+=
