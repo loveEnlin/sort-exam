@@ -1,5 +1,5 @@
 Comparison of [Comparison sorts](https://en.wikipedia.org/wiki/Comparison_sort "Wikipedia").
-=
+================================================
 
 ### **RESEARCH BACKGROUND**
 
@@ -7,4 +7,13 @@ A comparison sort is a type of sorting algorithm that only reads the list elemen
 
 ### **RESEARCH PURPOSE**
 
-I
+To find out the time complexity of six kinds of comparison sort methods below.
+
+### **THEORY ANALYSIS**
+
+>**SELECTION SORT**
+
+For [the best case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case "Wikipedia"),below is the code,
+>
+And below is the proof,
+>Assume 
