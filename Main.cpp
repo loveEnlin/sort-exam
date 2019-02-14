@@ -8,14 +8,13 @@
 using namespace std;
 
 
-//declear CountedInt
+//declare CountedInt
 class CountedInt {
 	public:
 		int value;
 		static long long com_count;
 		static long long set_count;
 
-	//redefine operator
 	bool operator<(const CountedInt& b) {
 		++com_count;
 		cout << 'a';
