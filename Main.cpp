@@ -79,7 +79,6 @@ class CountedInt {
 long long CountedInt::com_count = 0;
 long long CountedInt::set_count = 0;
 
-//----------------------Sort Function------------------------
 void bubble_sort(vector<CountedInt> &v) {
 	for(int i = 0;i < v.size();++i) {
 		for(int j = 0;j < v.size()-1 ;++j) {
@@ -108,10 +107,7 @@ void quick_sort(vector<CountedInt> &v) {
 void heap_sort(vector<CountedInt> &v) {
 
 }
-//-----------------------------------------------------------
 
-
-//basic function
 void print(vector<CountedInt>& v) {
 	for(int i = 0;i < v.size();++i) {
 		cout << v[i].value << ' ';
@@ -134,7 +130,6 @@ int pow(int n) {
 	return sum;
 }
 
-//function for beauty
 string nameGiver(int a, int b) {
 	string name = ".\\data\\data";
 	name += a +'0';
