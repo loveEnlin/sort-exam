@@ -7,8 +7,6 @@
 #include<vector>
 using namespace std;
 
-
-//declare CountedInt
 class CountedInt {
 	public:
 		int value;
@@ -17,7 +15,6 @@ class CountedInt {
 
 	bool operator<(const CountedInt& b) {
 		++com_count;
-		cout << 'a';
 		return this->value < b.value;
 	}
 
@@ -66,7 +63,6 @@ class CountedInt {
 		return is;
 	}
 
-	//main function
 	static void swap(CountedInt& a, CountedInt& b) {
 		int t = a.value;
 		a.value = b.value;
