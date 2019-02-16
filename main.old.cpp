@@ -1,5 +1,4 @@
-using namespace std;
-
+#include "main.hpp"
 class CountedInt {
 	public:
 		int value;
