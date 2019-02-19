@@ -4,7 +4,7 @@
 #include<vector>
 #include<string>
 
-constexpr std::string data_file{"./data"};
+const std::string data_file="./data";
 
 class Element{
 	public:
@@ -13,14 +13,19 @@ class Element{
 		bool operator>=(const Element& another);
 		bool operator>(const Element& another);
 		bool operator=(const Element& another);
-		bool operator=(const int& another);
-		void clear();
+		bool operator=(const char& another);
+		static void init();
 		static void swap(Element& first,Element& second);
-		static bool is_sorted(std::vector<Element>& v);
+		static bool is_sorted();
+		static bool input();
+		static void output();
+		static void sort_method();
 		
 		char value;
 		static long long cmp_count;
 		static long long set_count;
+		static std::vector<Element> data;
+		static long data_length;
 };//The class of the numbers to replace typical datatype.
 
 #endif

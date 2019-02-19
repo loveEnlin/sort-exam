@@ -2,8 +2,8 @@
 
 long long Element::cmp_count{0};
 long long Element::set_count{0};
-std::vector<Element> data;
-long data_length{0};
+std::vector<Element> Element::data;
+long Element::data_length{0};
 
 bool Element::operator<=(const Element& another){
 	++cmp_count;
@@ -31,7 +31,7 @@ bool Element::operator=(const Element& another){
 	return value;
 }
 
-bool Element::operator=(const int& another){
+bool Element::operator=(const char& another){
 	++set_count;
 	value=another;
 	return value;
@@ -52,7 +52,7 @@ void Element::swap(Element& first,Element& second){
 
 bool Element::is_sorted() {
 	std::vector<Element>::iterator i{data.begin()+1};
-	while(i != v.end()){
+	while(i != data.end()){
 		if(*i<*(i-1)){
 			return false;
 		}
@@ -61,10 +61,10 @@ bool Element::is_sorted() {
 }
 
 bool Element::input(){
-	;
+	return false;
 }
 
-bool Element::output(){
+void Element::output(){
 	;
 }
 
