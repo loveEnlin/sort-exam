@@ -75,7 +75,7 @@ void Element::output(){
 int main(){
 	while(Element::input()){
 		Element::sort_method();
-		if(!Element::is_sorted()) cout<<"Error! Times:"<<times;
+		if(!Element::is_sorted()) std::cout<<"Error! Times:"<<Element::times;
 		Element::output();
 	}
 	return 0;

@@ -1,6 +1,6 @@
 #include "main.hpp"
 
-std::string sort_name;
+std::string Element::sort_name;
 
 void Element::sort_method(){
 	;
