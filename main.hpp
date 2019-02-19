@@ -3,8 +3,10 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<fstream>
 
-const std::string data_file="./data";
+const std::string data_file{"./data"};
+const std::string log_file{"./log.md"};
 
 class Element{
 	public:
@@ -14,18 +16,20 @@ class Element{
 		bool operator>(const Element& another);
 		bool operator=(const Element& another);
 		bool operator=(const char& another);
-		static void init();
-		static void swap(Element& first,Element& second);
+		static void init();//To clear the data and initialize it.
+		static void swap(Element& first,Element& second);//To swap two Elements.
 		static bool is_sorted();
 		static bool input();
 		static void output();
 		static void sort_method();
 		
 		char value;
+		static int times;
 		static long long cmp_count;
 		static long long set_count;
 		static std::vector<Element> data;
 		static long data_length;
+		static std::string sort_name;
 };//The class of the numbers to replace typical datatype.
 
 #endif

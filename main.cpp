@@ -4,6 +4,7 @@ long long Element::cmp_count{0};
 long long Element::set_count{0};
 std::vector<Element> Element::data;
 long Element::data_length{0};
+int Element::times{0};
 
 bool Element::operator<=(const Element& another){
 	++cmp_count;
@@ -61,16 +62,20 @@ bool Element::is_sorted() {
 }
 
 bool Element::input(){
+	++times;
 	return false;
 }
 
 void Element::output(){
-	;
+	std::ofstream ofs(log_file, std::ofstream::out|std::ios::ate);
+	ofs<<'|'<<sort_name<<'|'<<times<<'|'<<"2<sup>"<<data_length<<"</sup>"<<'|'<<cmp_count<<'|'<<set_count<<'|';
+	ofs.close();
 }
 
 int main(){
 	while(Element::input()){
 		Element::sort_method();
+		if(!Element::is_sorted()) cout<<"Error! Times:"<<times;
 		Element::output();
 	}
 	return 0;
