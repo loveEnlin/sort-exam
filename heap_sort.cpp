@@ -1,20 +1,16 @@
-#include <iostream>
-#include <vector>
- 
+#include <main.hpp>
 using namespace std;
 string Element::sort_name{"heap_sort"};
  
-// heap sorting
-void Heapify(vector<int> &invec, int &s, int &len){
+void Heapify(vector<int> &data, int &s, int &len){
 	int fa = s;
 	int child = 2*fa+1;
-	cout << "fa1 = " << fa <<" " << "child1 = " << child << endl;
 	while(child < len){
-		if(child+1 < len && invec[child] < invec[child+1]){
+		if(child+1 < len && data[child] < data[child+1]){
 			++child;
 		}
-		if(invec[fa]<invec[child]){
-			Element::swap(invec[fa], invec[child]);
+		if(data[fa]<data[child]){
+			Element::swap(data[fa], data[child]);
 			fa = child;
 			child = 2*fa+1;
 			cout << "fa2 = " << fa <<" " << "child2 = " << child << endl;
@@ -23,25 +19,25 @@ void Heapify(vector<int> &invec, int &s, int &len){
 			break;
 		}
 	}
-	printkk(invec,len);
+	printkk(data,len);
 	cout << endl;
 }
  
 int start = 0;
  
-void HeapSort(vector<int> &invec, int &len){
+void HeapSort(vector<int> &data, int &len){
   // initial building heap
 	for(int i = (len-1)/2; i>=0;--i){
-		Heapify(invec, i, len);
+		Heapify(data, i, len);
 	}
 	for(int i = len-1; i>0;--i){
-		swap(invec[i],invec[start]);
-		Heapify(invec, start, i);
+		swap(data[i],data[start]);
+		Heapify(data, start, i);
 	}
 }
  
 int Element::sort_method(){
 {	
 	int len = date.size();
-	HeapSort(invec, len);
+	HeapSort(data, len);
 }
