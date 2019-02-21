@@ -1,5 +1,6 @@
 #include <main.cpp>
 using namespace std;
+string Element::sort_name{"stable_sort"};
 void Merge(vector<int> &data, int &start, int &ending, vector<int> &res){
   int is2 = start;
   int ie2 = ending;
