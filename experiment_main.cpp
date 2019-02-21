@@ -65,10 +65,13 @@ bool Element::is_sorted() {
 bool Element::input(){
 	++times;
 	ifs>>data_length;
+	std::cout<<data_length<<std::endl;
 	if(data_length==0) return false;
 	for(int i{data_length};i>0;--i){
 		char x;
+		std::cout<<'`'<<i<<std::endl;
 		ifs>>x;
+		std::cout<<static_cast<int>(x)<<',';
 		Element tmp;
 		tmp=x;
 		data.push_back(tmp);
