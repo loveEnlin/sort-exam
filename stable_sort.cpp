@@ -48,7 +48,7 @@ void mergeSort(vector<int> &data, int &start, int &ending, vector<int> &res){
   }
 }
  
-int main(){
+int Element::sort_method(){
   int length = data.size();
   int len = data.size()-1;
   vector<int> res;
