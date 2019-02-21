@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "experiment_main.hpp"
 
 std::string Element::sort_name{"Bubble Sort"};
 

@@ -28,8 +28,9 @@ class Element{
 		static long long cmp_count;
 		static long long set_count;
 		static std::vector<Element> data;
-		static long data_length;
+		static int data_length;
 		static std::string sort_name;
+		static std::ifstream ifs;
 };//The class of the numbers to replace typical datatype.
 
 #endif

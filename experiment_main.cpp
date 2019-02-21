@@ -1,9 +1,10 @@
-#include "main.hpp"
+#include "experiment_main.hpp"
 
 long long Element::cmp_count{0};
 long long Element::set_count{0};
+std::ifstream Element::ifs(data_file,std::ifstream::in|std::ifstream::binary);
 std::vector<Element> Element::data;
-long Element::data_length{0};
+int Element::data_length{0};
 int Element::times{0};
 
 bool Element::operator<=(const Element& another){
@@ -63,7 +64,16 @@ bool Element::is_sorted() {
 
 bool Element::input(){
 	++times;
-	return false;
+	ifs>>data_length;
+	if(data_length==0) return false;
+	for(int i{data_length};i>0;--i){
+		char x;
+		ifs>>x;
+		Element tmp;
+		tmp=x;
+		data.push_back(tmp);
+	}
+	return true;
 }
 
 void Element::output(){
