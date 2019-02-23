@@ -4,25 +4,31 @@
 using namespace std;
 string Element::sort_name{"Quick Sort"};
  
-void quicksort(vector<Element>& vec,int s,int t)
+void quicksort(vector<Element>& vec,int l,int r)
 {
-	int i=s,j=t;
+	int i=l,j=r;
 	int tem;
-	if(s<t)
+	if(l<r)
 	{
-		tem=vec[s].value;
-		while(i!=j)
+		tem=vec[(l+r)>>1].value;
+		while(i<=j)
 		{
-			while(j>i&&vec[j].value>tem)
-				j--;
-			vec[i]=vec[j];
 			while(i<j&&vec[i].value<tem)
 				i++;
-			vec[j]=vec[i];
+			while(j>i&&vec[j].value>tem)
+				j--;
+			
+			if(i<=j)
+			{
+				sawp(vec[i],vec[j]);
+				i++;
+				j--;
+			}
 		}
 		vec[i].value=tem;
-		quicksort(vec,s,i-1);
-		quicksort(vec,i+1,t);
+		if(i<r)	quicksort(vec,l,i);
+		if(l>l)	quicksort(vec,j,r);
+		return;
 	}
 }
 void Element::sort_method()
