@@ -1,7 +1,7 @@
-#include"main.hpp"
+#include "../main.hpp"
 using namespace std;
 
-string Element::sort_name{"selection_sorting "};
+string Element::sort_name{"Selection Sort"};
 
 void Element::sort_method() {
 	int j,k,i,m=-1000;
@@ -11,7 +11,7 @@ void Element::sort_method() {
 				m=data[k];i=k;
 			}
 		}
-		Element::swap(data[j],data[i]);
+		swap(data[j],data[i]);
 	}
 	return 0;
 }

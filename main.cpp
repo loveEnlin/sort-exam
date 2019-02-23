@@ -66,19 +66,15 @@ bool Element::is_sorted(){
 bool Element::input(){
 	init();
 	++times;
-	data_length=ifs.get();
-	std::cout<<"Times "<<times<<" ,Data Length:"<<static_cast<int>(data_length)<<std::endl;
+	ifs.get(data_length);
+	std::cout<<"Times="<<times<<",Data Length="<<static_cast<int>(data_length)<<",Data Size="<<(1<<static_cast<long long>(data_length))<<std::endl;
 	if(data_length==0) return false;//If data_length==0 means no data left
-	long a=0;
 	for(int i{1<<static_cast<long long>(data_length)};i>0;--i){
-		++a;
 		char x;
-		ifs>>x;
+		ifs.get(x);
 		Element tmp=x;
 		data.push_back(tmp);//Get the number from data_file and push into the vector of Elements
 	}
-	std::cout<<a<<std::endl;
-	std::cin>>a;
 	return true;
 }
 
@@ -95,7 +91,7 @@ Element::Element(const char& another){
 int main(){
 	while(Element::input()){
 		Element::sort_method();
-		if(!(Element::is_sorted())) std::cout<<"Isn't sorted at Times "<<Element::times<<std::endl;
+		if(!(Element::is_sorted())) std::cout<<"Isn't sorted at Times "<<Element::times<<std::endl<<std::endl;
 		Element::output();
 	}
 	return 0;
